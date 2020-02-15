@@ -1,0 +1,18 @@
+/* mb bgi close */
+#wrapper{
+    background: none;
+    background-color: white;
+}
+
+/* mb ment-btn change color */
+.menu-btn>span:after,
+.menu-btn>span:before {
+    background-color: #4d4d4d;
+}
+
+@media screen and (min-width: 768px){
+    /* pc menu color */
+    #wrapper>header>.main-menu>ul>li>a{
+    color: black;
+    }
+}

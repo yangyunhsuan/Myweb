@@ -1,0 +1,360 @@
+
+/* mb bgi close */
+#wrapper{
+    background: none;
+    background-color: white;
+}
+
+/* mb ment-btn change color */
+.menu-btn>span:after,
+.menu-btn>span:before {
+    background-color: #4d4d4d;
+}
+
+.pj-title{
+    width: 50%;
+    font-size: 3.5rem;
+    font-weight: lighter;
+    letter-spacing: .1rem;
+    font-family: 'Playfair Display';
+    text-align: left;
+    line-height: 150%;
+    padding: 20px 0 0 30px;
+    color: #344e6d;
+}
+
+.pj-type{
+    font-size: .5rem;
+    font-family: 'Noto Sans TC';
+    font-weight: lighter;
+    text-align: left;
+    padding: 15px 0 40px 33px;
+    color: #5dbab6;
+}
+
+.pj-up-banner{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.rwd-img{
+    display: block;
+    background-image: url('../uploads/yoga_800x500.jpg');
+    /* width: 100%; */
+    height: 100%;  /* 以高度作為基準*/
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+@media screen and (min-width: 768px){
+
+    /* pc menu color */
+    #wrapper>header>.main-menu>ul>li>a{
+        color: black;
+    }
+
+    /* .hd-pf>a:hover{
+        border: none;
+    }
+
+    .hd-pf>a{
+        border-bottom: 2px solid;
+        padding-bottom: 5px;
+    } */
+
+    #content{
+        width: 100%;
+        margin: auto;
+    }
+
+    .up-word-box{
+        max-width: 1140px;
+        margin: auto;
+        padding-top: 100px;
+    }
+
+    .pj-title{
+        padding: 0;
+    }
+    
+    .pj-type{
+        padding: 15px 0 40px 5px;
+        font-size: 1rem;
+    }
+
+    .pj-up-banner{
+        height: 700px;
+        border-radius: 4px;
+    }
+
+} /* media 768 end*/
+
+
+/* ----------- pj-container ---------- */
+
+.pj-container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+/* ----------- lf ---------- */
+.lf{
+    width: 90%;
+    display: flex;
+}
+
+.lf-word-box, .mid-word-box{
+    margin: auto;
+}
+
+
+.lf-word-box>p>.type{
+    padding-right: 1rem;
+}
+
+.lf-word-box>p>.date{
+    padding-right: 1.7rem;
+}
+
+.lf-word-box, .mid-word-box, .ri{
+    margin-top: 30px;
+    font-size: .5rem;
+    font-weight: 100;
+    line-height: 180%;
+    letter-spacing: 0.1em;
+    color: rgb(158, 158, 158);
+}
+
+.lf-word-box>p>.type, .date, .software, .ri-describe, .ri-userstory{
+    color: #344e6d;
+}
+
+
+/* ----------- mid ---------- */
+.software{
+    margin-bottom: 5px;
+}
+
+
+/* ----------- ri ---------- */
+.ri{
+    width: 90%;
+    margin: auto;
+}
+
+.ri-describe, .ri-userstory{
+    margin: 30px 0 5px 0;
+}
+
+
+
+
+@media screen and (min-width: 768px){
+
+    .pj-container{
+        width: 90%;
+        flex-wrap: nowrap;
+        margin: 80px 0;
+    }
+
+    .pj-up-banner{
+        max-width: 1140px;
+    }
+    
+    .lf{
+        width: 50%;
+        flex-direction: column;
+        align-items: flex-end;
+        /* background-color: rgb(252, 134, 134); */
+    }
+
+    .lf-word-box{
+        margin-top: 50px;
+        /* background-color: rgb(238, 91, 91); */
+    }
+    .lf-word-box>p{
+        margin-right: 25px;
+    }
+
+    .ri{
+        width: 50%;
+    }
+
+    .ri-content{
+        /* background-color: rgb(198, 199, 250); */
+        width: 80%;
+    }
+
+}
+
+
+
+/* ---------- f-mockup ---------- */
+.f-mockup{
+    width: 100%;
+    margin-top: 70px;
+    padding-bottom: 30px;
+    background-color: rgb(235, 235, 235);
+}
+
+.f-mockup>h4{
+    font-size: 2rem;
+    line-height: 150%;
+    text-align: left;
+    letter-spacing: .03rem;
+    padding: 25px 0 0 30px;
+    color: #344e6d;
+    font-family: 'Playfair Display';
+}
+
+.f-mockup>h3{
+    font-size: 0.2rem;
+    text-align: right;
+    font-weight: 100;
+    padding: 5px 40px 10px 0;
+    color: #5dbab6;
+}
+
+.mockup-box{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+    padding: 30px 0;
+}
+
+.img-box{
+    width: 42%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: -1px -1px 20px rgb(124, 124, 124);
+    margin: 15px  0;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+
+@media screen and (min-width: 768px){
+
+    .f-mockup>h3{
+        font-size: 1rem;
+        padding: 5px 50px 10px 0;
+    }
+
+    .mockup-box{
+        width: 100%;
+        display: flex;
+        padding-top: 15px;
+    }
+
+    .img-box{
+        width: 20%;
+        margin: 20px;
+    }
+
+}
+
+
+/* ---------- colors ---------- */
+.colors{
+    width: 100%;
+    margin: auto;
+}
+
+.colors>.c-word{
+    font-size: 1rem;
+    font-family: 'Noto Sans TC';
+    font-weight: lighter;
+    text-align: left;
+    padding: 50px 0 40px 40px;
+    color: #5dbab6;
+}
+
+.color-block{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    height: 200px;
+    margin: auto;
+}
+
+.c-block{
+    width: 100px;
+    height: 40px;
+    color: white;
+    text-align: right;
+    letter-spacing: .05rem;
+    font-size: .08rem;
+    line-height: 150%;
+}
+
+.c-block1{
+    background-color: #A1C4FD;
+    color: #4a4a4a;
+    
+}
+.c-block2{
+    background-color: #C2E9FB;
+    color: #4a4a4a
+}
+.c-block3{
+    background-color: rgba(74, 74, 74, 0.993);
+}
+.c-block4{
+    background-color: rgba(74, 74, 74, 0.658);
+}
+
+.color-block p{
+    margin: 40px 10px 0 0;
+}
+
+.color-block .c-block3:nth-of-type(3){color: #4a4a4a;}
+.color-block .c-block4:nth-of-type(4){color: #4a4a4a;}
+
+
+
+@media screen and (min-width: 768px){
+
+    .colors>.c-word{
+        padding: 100px 0 40px 150px;
+    }
+
+    .color-block{
+        flex-wrap: nowrap;
+        height: 300px;
+        padding-top: 30px;
+    }
+
+    .c-block{
+        width: 150px;
+        height: 80px;
+        border-radius: 4px;
+        text-align: right;
+        letter-spacing: .05rem;
+        font-size: .08rem;
+        line-height: 150%;
+        margin: 30px 30px;
+        transform:rotate(40deg);
+    }
+
+    .color-block .c-block3:nth-of-type(3){color: #ffffff;}
+    .color-block .c-block4:nth-of-type(4){color: #ffffff;}
+
+    .c-block1>p, .c-block2>p{
+        margin: 55px 10px 0 0;
+    }
+
+
+
+
+}

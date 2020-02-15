@@ -1,7 +1,5 @@
 
-
-
-$(window).ready(function () {
+$(document).ready(function () {
     // menu click event
     $('.menu-btn').click(function () {
         $(this).toggleClass('active');
@@ -9,11 +7,12 @@ $(window).ready(function () {
         if ($(this).hasClass('active')) {
             $('.main-menu').addClass('active');
             $('.main-menu').fadeIn();
+            // $('body').addClass('overflow-hidden');
         }
         else {
             $('.main-menu').removeClass('active');
             $('.main-menu').fadeOut();
-
+            // $('body').removeClass('overflow-hidden');
         }
     });
 });
@@ -26,7 +25,9 @@ $(window).resize(function () {
     else {
         $('.main-menu').hide();
     }
-
 });
+
+
+
 
 

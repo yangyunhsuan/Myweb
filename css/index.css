@@ -1,262 +1,11 @@
 
 
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC|Playfair+Display&display=swap');
-
-    
-body{
-    font-family: 'Playfair Display', 'Noto Sans TC';
-    box-sizing: border-box;
-}
-    
-#wrapper{
-    position: relative;
-    min-width: 375px;
-    height: 100vh;
-    background-image: url('../images/bgi_bgi_h.jpg');
-    background-repeat: no-repeat;
-}
-
-
-/* ------------ header  ------------ */
-#wrapper>header>.logo>a>img{
-    width: 50px;
-    padding: 15px 15px ;
-}
-
-/* menu-btn */
-.menu-btn{
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    right: 35px;
-    top: 20px;
-    z-index: 2;
-}
-
-.menu-btn>span{
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    top: 50%;
-    left: 50%;
-    margin: -1 0 0 -15px;
-    border-radius: 1px;
-    background-color: #b1afaf;
-}
-
-.menu-btn>span:after,
-.menu-btn>span:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    left: 50%;
-    margin-left: -15px;
-    border-radius: 1px;
-    background-color: rgb(255, 255, 255);
-}
-
-.menu-btn>span:after{
-    top: -10px;
-}
-
-.menu-btn>span:before{
-    bottom: -10px;
-}
-
-/* menu-btn active */
-.menu-btn.active>span{
-    height: 0;
-}
-
-.menu-btn.active>span:after
-.menu-btn.active>span:before{
-    top: 1px;
-}
-
-.menu-btn.active>span:after{
-    transform: rotate(45deg);
-}
-
-.menu-btn.active>span:before{
-    transform: rotate(-45deg);
-}
-
-.menu-btn.active>span:after{
-    top: -1.5px;
-}
-
-.menu-btn.active>span:before{
-    bottom: -1.5px;
-}
-
-
-/* main-menu block */
-.main-menu{
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    display: none;
-}
-
-.main-menu ul{
-    margin-top: 150px;
-}
-
-.main-menu li,a{
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 900;
-    letter-spacing: .1em;
-}
-
-.main-menu>ul>.hd-pf, .hd-ab{
-    margin-top: 80px;
-}
-
-.main-menu>ul>.hd-email-title{
-    margin-top: 120px;
-}
-
-.main-menu>ul>.hd-email{
-    padding-top: 5px;
-}
-
-.main-menu>ul>.hd-email>a{
-    font-size: .8rem;
-}
-
-.main-menu>ul>.hd-link{
-    margin-top: 200px;
-}
-
-.hd-link>a{
-    padding: 15px;
-    font-size: .8rem;
-}
-
-
-/* main-menu active */
-.main-menu.active{
-    width: 100%;
-    height: 100%;
-    background-color: #5a8ecc;
-}
-.main-menu ul.active{
-    margin-top: 150px;
-}
-
-.main-menu li,a.active{
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 900;
-    letter-spacing: .1em;
-}
-
-.main-menu>ul>.hd-pf, .hd-ab.active{
-    margin-top: 80px;
-}
-
-.main-menu>ul>.hd-email-title.active{
-    margin-top: 120px;
-}
-
-.main-menu>ul>.hd-email,a.active{
-    padding-top: 5px;
-}
-
-.main-menu>ul>.hd-email>a.active{
-    font-size: .8rem;
-}
-
-.main-menu>ul>.hd-link.active{
-    margin-top: 130px;
-    /* background-color: rgb(252, 140, 140); */
-}
-
-.hd-link>a.active{
-    padding: 15px;
-    font-size: .8rem;
-}
-
-/* main-menu active end */
-
-
-@media screen and (min-width: 768px){
-    #wrapper{
-        background-image: url('../images/pc_bgc02.jpg');
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-        width: 100%;
-        margin: auto;
-        background-color: #5a8ecc;
-    }
-    
-    #wrapper>header{
-        max-width: 1140px;
-        width: 100%;
-        margin: auto;
-        border-top-color: rgb(194, 192, 192);
-    }
-
-    #wrapper>header>.menu-btn{
-        display: none;
-    }
-    
-    #wrapper>header>.main-menu{
-        display: block; /* 打開 */
-    }
-
-    #wrapper>header>.main-menu>ul{
-        max-width: 1140px;
-        width: 100%;
-        height: 72px;
-        margin: auto;
-        display: flex;
-        justify-content: flex-end;
-    }
-    
-    #wrapper>header>.main-menu>ul>li{
-        margin: 0;
-        padding: 0;
-        padding: 30px 15px;
-    }
-
-    #wrapper>header>.main-menu>ul>li>a{
-        color: white;
-        font-size: 1rem;
-    }
-    
-    #wrapper>header>.main-menu>ul>li>a:hover{
-        border-bottom: 2px solid ;
-        border-radius: 1px;
-        padding-bottom: 5px;
-        color: black;
-    }
-
-    #wrapper>header>.main-menu>ul>.hd-email-title, .hd-email, .hd-link{
-        display: none;
-    }
-
-
-} /* media header 768 end */
-
-
-
 /* ------------ content ------------ */
 #content{
     position: relative;
     max-width: 375px;
     width: 100%;
-    height: calc(100vh - 72px);
+    height: calc(100vh - 82px);
     color: white;
     margin: auto;
 }
@@ -265,7 +14,6 @@ body{
     position: absolute;
     top: 20%;
     left: 6%;
-    font-family: 'Noto Sans TC';
     font-size: 2em;
     font-weight: 600;
     line-height: 150%;
@@ -276,18 +24,19 @@ body{
     position: absolute;
     top: 39%;
     left: 67%;
-    font-family: 'Noto Sans TC';
     font-size: .8em;
     letter-spacing: .05em;
     font-weight: lighter;
 }
 
 #content>.slogn{
+    font-family: 'Playfair Display';
     position: absolute;
-    top: 60%;
+    top: 63%;
     left: 12%;
     font-size: .8em;
     font-weight: lighter;
+    letter-spacing: .02rem;
     opacity: .8;
 }
 
@@ -314,28 +63,28 @@ body{
         position: relative;
         max-width: 800px;
         width: 100%;
-        height: calc(100vh - 122px);
+        height: 100%;
         margin: auto;
     }
 
     #content>.title{
         position: absolute;
-        top: 20%;
-        left: 21%;
+        top: 25%;
+        left: 23%;
         font-size: 3em;
     }
 
     #content>.location{
         position: absolute;
-        top: 47%;
-        left: 72%;
+        top: 48%;
+        left: 74%;
         font-size: .9em;
         font-weight: 100;
     }
 
     #content>.slogn{
         position: absolute;
-        top: 75%;
+        top: 73%;
         left: -10%;
         padding: 0;
         font-size: .9em;
@@ -371,46 +120,75 @@ body{
 }/* media content 768 end */
 
 
-/* ------------ Portfolio ------------ */
+/* ------------ pf-content ------------ */
 #pf-content{
-    max-width: 375px;
     width: 100%;
     margin: auto;
-    font-family: 'Noto Sans TC';
     letter-spacing: .03em;
     text-align: center;
+    /* background-color: rgb(241, 241, 241); */
 }
 
 #pf-content>.portfolio-en{
     font-size: 2rem;
-    padding-top: 50px;
+    padding-top: 100px;
     color: #5a8ecc;
 }
 
 #pf-content>.portfolio-zn{
-    padding: 10px 0;
+    padding: 20px 0 10px 0;
     color: #5dbab6;
 }
 
 hr{
     border: none;
-    width: 15%;
-    height: 1px;
+    width: 40px;
+    height: 2px;
     background-color: rgb(153, 153, 153);
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
-.project-box{
+.pf-box{
+    display: flex;
+    flex-wrap: wrap;
+    /* height: 1000px; */
+    width: 100%;
+    justify-content: center;
+    /* margin-top: 50px; */
+}
+
+.img-box{
     position: relative;
-    width: 95%;
+    width: 350px;
     height: 300px;
-    margin: auto;
-    padding-top: 30px;
     overflow: hidden;
+    margin-top: 30px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 15px rgb(201, 201, 201);
 }
 
-.project-box>h2{
+.pj1>a>img{
     position: absolute;
-    top: 75%;
+    left: -20%;
+    height: 100%;
+}
+
+.pj2>img{
+    position: absolute;
+    left: -9%;
+    height: 100%;
+}
+
+.pj3>img{
+    position: absolute;
+    left: -10%;
+    height: 102%;
+}
+
+.img-box>h2{
+    position: absolute;
+    top: 72%;
     width: 100%;
     padding: 20px 0 45px 25px;
     font-size: 1.2rem;
@@ -420,7 +198,7 @@ hr{
     background-color: rgba(83, 83, 83, 0.3);
 }
 
-.project-box>p{
+.img-box>p{
     position: absolute;
     top: 86%;
     padding: 15px 0 0 25px;
@@ -446,181 +224,175 @@ hr{
     color: #fcac44;
 }
 
+
 @media screen and (min-width: 768px){
 
-    
-    #pf-content{
+    .pf-content{
         max-width: none;
         width: 100%;
-        background-color: rgb(218, 214, 214);
-        /* height: 100vh; */
     }
 
+    #pf-content>.portfolio-en{
+        padding-top: 100px;
+    }
+
+    hr{
+        margin-bottom: 40px;
+    }
+    
+    .pf-box{
+        width: 100%;
+        margin: auto;
+        /* background-color: rgb(245, 128, 128); */
+    }
+
+    .img-box{
+        margin: 30px;
+        width: 400px;
+        height: 350px;
+        overflow: hidden;
+        margin-top: 30px;
+        /* box-shadow: 1px 1px 15px rgb(201, 201, 201); */
+    }
+
+    .img-box>h2{
+        top: 76%;
+    }
+
+    .link-pf{
+        margin: auto;
+        margin-bottom: 50px;
+    }
 }
-
-
-
 
 
 
 
 /* ------------ about ------------ */
 .about-box{
-    position: relative;
-    /* height: 100vh; */
-    font-family: 'Noto Sans TC';
-    letter-spacing: .03em;
-    text-align: center;
-    overflow: hidden;
-    /* background-color:rgb(231, 231, 231); */
-}
-
-.about-box>.photo{
-    width: 100%;
-    height: 300px;
+    max-width: 520px;
+    width: 100%; 
     margin: auto;
-    margin-top: 50px;
-    background-color: rgb(119, 117, 117);
 }
 
-.about-box>.about-en{
+.lf-photo{
+    margin-top: 150px;   
+}
+
+.lf-photo>.photo{
+    width: 100%;
+    /* margin: auto; */
+}
+
+.lf-photo img{
+    width: 100%;
+}
+
+.ri-word{
+    position: relative;
+    
+}
+
+.about-en{
     font-size: 2rem;
     color: #5a8ecc;
-    padding-top: 20px;
+    padding: 20px 0 0 30px;
+    text-align: left;
 }
 
-.about-box>.about-zn{
-    padding: 10px 0;
+.about-zn{
+    padding: 10px 0 10px 30px;
+    text-align: left;
     color: #5dbab6;
 }
 
-.about-word{
-    width: 90%;
-    line-height: 120%;
-    margin: auto;
-    padding: 20px 0 180px 0;
-    text-align: justify;
+.ab-hr{
+    margin-bottom: 40px;
+    margin-left: 30px;
 }
 
-.resum-btn{
+.resume-btn>a{
     position: absolute;
-    top: 80%;
+    top: 20%;
     width: 90px;
-    line-height: 35px;
+    text-align: center;
+    font-size: .5rem;
+    line-height: 30px;
     border: 1px solid #fcac44;
     border-radius: 5px;
     color: #fcac44;
     right: 5%;
 }
 
+.about-word{
+    /* width: 90%; */
+    letter-spacing: .1rem;
+    line-height: 150%;
+    margin: auto;
+    padding: 20px 25px 100px 25px;
+    text-align: justify;
+}
 
-/* ------------ footer ------------ */
+.icon-box{
+    display: flex;
+    background-color: rgb(125, 207, 118);
+}
 
-footer{
-    position: relative;
-    background-color: #4d4d4d;
-    width: 100%;
+.icon{
+    width: 80px;
     height: 80px;
+    background-color: rgb(107, 115, 189);
+    margin: 5px;
 }
-
-.sm-ft-copyright{
-    font-family: 'Noto Sans TC';
-    font-size: .02rem;
-    letter-spacing: .2em;
-    color: rgb(179, 178, 178);
-    text-align: center;
-    padding-top: 45px;
-}
-
-.top{
-    position: absolute;
-    top: -30%;
-    left: 80%;
-    padding: 15px 15px;
-    border-radius: 2px;
-    font-size: .8rem;
-    letter-spacing: .1em;
-    background-color: #646363;
-}
-
-.top>a{
-    display: block;
-    color: #ffffff;
-}
-
-.sm-ft-email, .ft-link{
-    display: none;
-}
-
 
 
 @media screen and (min-width: 768px){
-
-    #footer{
-        position: relative;
-        background-color: #4d4d4d;
+    .ri-word{
+        width: 90%;
     }
 
-    footer{
+    .about-en{
+        padding: 50px 0 0 50px;
+    }
+    
+    .about-zn{
+        padding: 20px 0 10px 50px;
+    }
+    
+    .ab-hr{
+        margin: 0;
+        margin-left: 50px;
+        margin-top: 10px;
+        /* margin: auto; */
+    }
+    
+    .about-box{
+        max-width: none;
         display: flex;
-        max-width: 1140px;
         width: 100%;
-        margin: auto;
-        background: none;
-        justify-content: space-between;
-        height: 60px;
-        
+        height: 800px;
+        margin-top: 200px;
     }
 
-    .sm-ft-email, .ft-link{
-        display: block;  /* 顯示mb-ft關閉的*/
-        width: 25%;
-        text-align: center;
+    .lf-photo{
+        width: 60%;
+        margin: 0;
+        /* overflow: hidden; */
+        /* background-color: rgb(58, 35, 112); */
+    }
+    .photo>img{
+        width: 100%;
     }
 
-    .sm-ft-copyright, .sm-ft-email, .ft-link{
-        padding: 0;
-        line-height: 60px;
-        font-family: 'Noto Sans TC';
-    }
-    
-    .sm-ft-copyright{
-        width: 50%;
-        font-size: .9rem;
-        font-weight: 500;
-        letter-spacing: .1em;
-        text-align: left;
-        padding-left: 35px;
-        flex-grow: 2;
-        flex-shrink: 1;
-
+    .resume-btn>a{
+        top: 13%;
+        right: 20%;
+        color: #fcac44;
     }
 
-    .sm-ft-email>a, .ft-link>a{
-        font-size: .9rem;
-        font-weight: 500;
-        letter-spacing: .1em;
-        color: rgb(179, 178, 178);
-        padding: 10px;
-        flex-shrink: 1;
-    }
-
-    #footer div:nth-of-type(2){order:-1;}
-
-
-    .top{
-        position: absolute;
-        top: -80%;
-        left: 88%;
+    .about-word{
+        margin: 20px 60px;
     }
     
-
-    
-    
-
-    /* .or-container div:nth-child(1) {order:2;}
-    .or-container div:nth-child(2) {order:1;}
-    .or-container div:nth-of-type(3) {order:3;}
-    .or-container div:nth-of-type(4) {order:4;} */
 
 }
