@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC|Playfair+Display&display=swap');
+
+html, body{
+    /* 設定body高度為100% 拉到視窗可視的大小 */
+    height: 100%;
+}
+
+body{
+    font-family: 'Noto Sans TC', 'Playfair Display';
+    box-sizing: border-box;
+}
+
+/* .overflow-hidden{
+    overflow: hidden;
+} */
+
+#wrapper {
+    min-height: 100%;
+    position: relative;
+}
+    
+#wrapper{
+    position: relative;
+    min-width: 375px;
+    height: 100vh;
+    background-image: url('../images/bgi_bgi_h.jpg');
+    background-repeat: no-repeat;
+}
+
+
+/* ------------ header  ------------ */
+
+#wrapper>header>.logo>a>img{
+    width: 50px;
+    height: 50px;
+    padding: 15px 15px ;
+}
+
+
+/* menu-btn */
+.menu-btn{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 35px;
+    top: 20px;
+    z-index: 2;
+}
+
+.menu-btn>span{
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 50%;
+    left: 50%;
+    margin: -1 0 0 -15px;
+    border-radius: 1px;
+    background-color: #b1afaf;
+}
+
+.menu-btn>span:after,
+.menu-btn>span:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 50%;
+    margin-left: -15px;
+    border-radius: 1px;
+    background-color: rgb(255, 255, 255);
+}
+
+.menu-btn>span:after{
+    top: -10px;
+}
+
+.menu-btn>span:before{
+    bottom: -10px;
+}
+
+/* menu-btn active */
+.menu-btn.active>span{
+    height: 0;
+}
+
+.menu-btn.active>span:after
+.menu-btn.active>span:before{
+    top: 1px;
+}
+
+.menu-btn.active>span:after{
+    transform: rotate(45deg);
+}
+
+.menu-btn.active>span:before{
+    transform: rotate(-45deg);
+}
+
+.menu-btn.active>span:after{
+    top: -1.5px;
+}
+
+.menu-btn.active>span:before{
+    bottom: -1.5px;
+}
+
+
+/* main-menu block */
+.main-menu{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: none;
+}
+
+.main-menu ul{
+    margin-top: 150px;
+}
+
+.main-menu li,a{
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 900;
+    letter-spacing: .1em;
+}
+
+.main-menu>ul>.hd-pf, .hd-ab{
+    margin-top: 80px;
+}
+
+.main-menu>ul>.hd-email-title{
+    margin-top: 120px;
+}
+
+.main-menu>ul>.hd-email{
+    padding-top: 5px;
+}
+
+.main-menu>ul>.hd-email>a{
+    font-size: .8rem;
+}
+
+.main-menu>ul>.hd-link{
+    margin-top: 200px;
+}
+
+.hd-link>a{
+    padding: 15px;
+    font-size: .8rem;
+}
+
+
+/* main-menu active */
+.main-menu.active{
+    width: 100%;
+    height: 100vh;
+    background-color: #5a8ecc;  
+}
+
+
+@media screen and (min-width: 768px){
+    #wrapper{
+        background-image: url('../images/pc_bgc02.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 100%;
+        margin: auto;
+        background-color: #5a8ecc;
+    }
+    
+    #wrapper>header{
+        display: flex;
+        max-width: 1140px;
+        width: 100%;
+        margin: auto;
+    }
+
+    #wrapper>header>.logo{
+        width: 70%;
+        padding-left: 15px;
+    }
+
+    #wrapper>header>.menu-btn{
+        display: none;
+    }
+    
+    #wrapper>header>.main-menu{
+        display: block;   /* 打開 */
+        position: static;  /* 移除mb的position:ab*/
+        margin: 0;
+        padding-right: 15px;
+        height: 82px;
+        justify-content: flex-end;
+        width: 30%;
+        background: none;
+    }
+
+    #wrapper>header>.main-menu>ul{
+        position: static;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        justify-content: flex-end;
+    }
+    
+    #wrapper>header>.main-menu>ul>li{
+        margin: 0;
+        padding: 0;
+        padding: 30px 15px;
+    }
+
+    #wrapper>header>.main-menu>ul>li>a{
+        color: white;
+        font-size: 1rem;
+    }
+    
+    #wrapper>header>.main-menu>ul>li>a:hover{
+        border-bottom: 2px solid ;
+        border-radius: 1px;
+        padding-bottom: 5px;
+        color: black;
+    }
+
+    #wrapper>header>.main-menu>ul>.hd-email-title, .hd-email, .hd-link{
+        display: none;
+    }
+
+    #id_content{
+        width: 100%;
+        height: 100%;
+        /* padding: 82px 0 -60px 0; */
+    }
+} /* media header 768 end */
+
+
+
+/* ------------ footer ------------ */
+
+#footer>footer{
+    position: absolute;
+    background-color: #4d4d4d;
+    width: 100%;
+    height: 80px;
+    /* bottom: 0; */
+}
+
+.sm-ft-copyright{
+    font-size: .02rem;
+    letter-spacing: .2em;
+    color: rgb(179, 178, 178);
+    text-align: center;
+    padding-top: 45px;
+}
+
+.top{
+    position: absolute;
+    top: -30%;
+    left: 80%;
+    padding: 15px 15px;
+    border-radius: 2px;
+    font-size: .8rem;
+    letter-spacing: .1em;
+    background-color: #646363;
+}
+
+.top>a{
+    display: block;
+    color: #ffffff;
+}
+
+.sm-ft-email, .ft-link{
+    display: none;
+}
+
+
+@media screen and (min-width: 768px){
+
+    #footer{
+        background-color: #4d4d4d;
+        height: 60px;
+    }
+
+    #footer>footer{
+        background: none;
+        height: 60px;
+    }
+    
+
+    #footer>footer>.box{
+        display: flex;
+        max-width: 1140px;
+        width: 100%;
+        justify-content: space-between;
+        margin: auto;
+    }
+
+    .sm-ft-email, .ft-link{
+        display: block;  /* 打開mb-ft關閉的功能*/
+    }
+
+    .sm-ft-copyright, .sm-ft-email, .ft-link{
+        padding: 0;
+        line-height: 60px;
+        
+    }
+    
+    .sm-ft-copyright{
+        font-size: .9rem;
+        font-weight: 500;
+        letter-spacing: .1em;
+        text-align: left;
+        padding-left: 30px;
+        flex-grow: 2;
+        flex-shrink: 1;
+    }
+
+    .sm-ft-email, .ft-link{
+        text-align: right;
+    }
+    
+    .sm-ft-email>a, .ft-link>a{
+        font-size: .9rem;
+        font-weight: 500;
+        letter-spacing: .1em;
+        color: rgb(179, 178, 178);
+        padding: 0 30px 0 15px;
+        flex-shrink: 1;
+    }
+
+    #footer div:nth-of-type(2){order:-1;}
+
+    .top{
+        position: absolute;
+        top: -80%;
+        left: 88%;
+        /* display: none; */
+    }
+    
+}/* media footer 768 end */
+
+
