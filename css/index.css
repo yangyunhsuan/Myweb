@@ -280,8 +280,8 @@ hr{
 }
 
 .lf-photo>.photo{
-    width: 100%;
-    /* margin: auto; */
+    width: 90%;
+    margin: auto;
 }
 
 .lf-photo img{
